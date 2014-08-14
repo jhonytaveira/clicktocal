@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip: 1.5
+  ddd: MyString
+  number: 1.5
+  carried_out: false
+
+two:
+  ip: 1.5
+  ddd: MyString
+  number: 1.5
+  carried_out: false
