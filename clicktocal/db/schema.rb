@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20140814143620) do
 
   create_table "register_numbers", force: true do |t|
-    t.float    "ip",          limit: 24
+    t.string   "ip"
     t.string   "ddd"
     t.float    "number",      limit: 24
     t.boolean  "carried_out"

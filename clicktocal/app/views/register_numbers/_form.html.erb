@@ -1,0 +1,53 @@
+<%= simple_form_for(@register_number) do |f| %>
+    <% if @register_number.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@register_number.errors.count, "error") %> prohibited this register_number from being saved:</h2>
+
+          <ul>
+            <% @register_number.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.input :ip, input_html:{ readonly: true, style: 'width: 100px' }  %>
+    </div>
+    <div class="field">
+      <%= f.input :ddd, collection: [62,64] %>
+    </div>
+    <div class="field">
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+    </div>
+    <div class="field">
+      <%= f.label :carried_out %>
+      <%= f.check_box :carried_out %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+  var ip = myIP();
+  $('#register_number_ip').val(ip.replace(' ',''));
+
+   function myIP() {
+       if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+       else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+       xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
+       xmlhttp.send();
+
+       hostipInfo = xmlhttp.responseText.split("\n");
+
+       for (i=0; hostipInfo.length >= i; i++) {
+           ipAddress = hostipInfo[i].split(":");
+           if ( ipAddress[0] == "IP" ) return ipAddress[1];
+       }
+
+       return false;
+   }
+</script>

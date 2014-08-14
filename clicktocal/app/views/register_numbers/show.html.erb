@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @register_number.ip %>
+</p>
+
+<p>
+  <strong>Ddd:</strong>
+  <%= @register_number.ddd %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @register_number.number %>
+</p>
+
+<p>
+  <strong>Carried out:</strong>
+  <%= @register_number.carried_out %>
+</p>
+
+<%= link_to 'Edit', edit_register_number_path(@register_number) %> |
+<%= link_to 'Back', register_numbers_path %>
