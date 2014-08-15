@@ -15,7 +15,7 @@
       <%= f.input :ip, input_html:{ readonly: true, style: 'width: 100px' }  %>
     </div>
     <div class="field">
-      <%= f.input :ddd, collection: [62,64] %>
+      <%= f.input :ddd, collection: @register_number.arrayDDD %>
     </div>
     <div class="field">
       <%= f.label :number %>
