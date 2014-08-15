@@ -6,19 +6,19 @@
 </p>
 
 <p>
-  <strong>Ddd:</strong>
+  <strong>DDD:</strong>
   <%= @register_number.ddd %>
 </p>
 
 <p>
-  <strong>Number:</strong>
+  <strong><%=RegisterNumber.human_attribute_name :number%></strong>
   <%= @register_number.number %>
 </p>
 
 <p>
-  <strong>Carried out:</strong>
+  <strong><%=RegisterNumber.human_attribute_name :carried_out%></strong>
   <%= @register_number.carried_out %>
 </p>
 
-<%= link_to 'Edit', edit_register_number_path(@register_number) %> |
-<%= link_to 'Back', register_numbers_path %>
+<%= link_to t('edit'), edit_register_number_path(@register_number) %> |
+<%= link_to t('back'), register_numbers_path %>

@@ -1,12 +1,12 @@
-<h1>Listing register_numbers</h1>
+<h1><%=t('listing_register') %></h1>
 
 <table>
   <thead>
     <tr>
       <th>Ip</th>
-      <th>Ddd</th>
-      <th>Number</th>
-      <th>Carried out</th>
+      <th>DDD</th>
+      <th>Numero</th>
+      <th>Realizado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= register_number.ddd %></td>
         <td><%= register_number.number %></td>
         <td><%= register_number.carried_out %></td>
-        <td><%= link_to 'Show', register_number %></td>
-        <td><%= link_to 'Edit', edit_register_number_path(register_number) %></td>
-        <td><%= link_to 'Destroy', register_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), register_number %></td>
+        <td><%= link_to t('edit'), edit_register_number_path(register_number) %></td>
+        <td><%= link_to t('destroy'), register_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Register number', new_register_number_path %>
+<%= link_to t('new_register'), new_register_number_path %>
