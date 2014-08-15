@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ace2dd99-03ba-4843-b288-ea23578704ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register_numbers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/register_numbers/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register_numbers/new.html.erb" afterPath="$PROJECT_DIR$/app/views/register_numbers/new.html.erb" />
     </list>
     <ignored path="clicktocal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/register_numbers/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25" vertical-offset="195" max-vertical-offset="870">
+            <state vertical-scroll-proportion="-5.625" vertical-offset="195" max-vertical-offset="870">
               <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/register_numbers/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.11111111" vertical-offset="0" max-vertical-offset="540">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,7 +108,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20140814143620_create_register_numbers.rb" />
         <option value="$PROJECT_DIR$/app/helpers/register_numbers_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/register_numbers/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/register_numbers/new.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/pt-BR.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/test/fixtures/register_numbers.yml" />
@@ -119,6 +118,7 @@
         <option value="$PROJECT_DIR$/app/models/register_number.rb" />
         <option value="$PROJECT_DIR$/app/controllers/register_numbers_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/register_numbers/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/register_numbers/new.html.erb" />
       </list>
     </option>
   </component>
@@ -891,14 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/register_numbers/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/register_numbers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
@@ -909,8 +901,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/register_numbers/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25" vertical-offset="195" max-vertical-offset="870">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="195" max-vertical-offset="870">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/register_numbers/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11111111" vertical-offset="0" max-vertical-offset="540">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
