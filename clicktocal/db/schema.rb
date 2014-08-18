@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20140814143620) do
 
   create_table "register_numbers", force: true do |t|
     t.string   "ip"
-    t.string   "ddd"
-    t.float    "number",      limit: 24
+    t.integer  "ddd"
+    t.integer  "number"
     t.boolean  "carried_out"
     t.datetime "created_at"
     t.datetime "updated_at"
