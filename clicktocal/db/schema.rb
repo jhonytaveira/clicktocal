@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814143620) do
+ActiveRecord::Schema.define(version: 20140818191134) do
 
   create_table "register_numbers", force: true do |t|
     t.string   "ip"
-    t.integer  "ddd"
-    t.integer  "number"
+    t.integer  "ddd",         limit: 2, null: false
+    t.integer  "number",      limit: 8, null: false
     t.boolean  "carried_out"
     t.datetime "created_at"
     t.datetime "updated_at"
