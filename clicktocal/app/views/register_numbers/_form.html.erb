@@ -12,7 +12,7 @@
     <% end %>
 
     <div class="field">
-      <%= f.input :ip, input_html:{ readonly: true, style: 'width: 100px' }  %>
+      <%= f.input :ip, input_html:{ readonly: true, style: 'width: 100px',type: 'hidden' }  %>
     </div>
     <div class="field">
       <%= f.input :ddd, collection: @register_number.arrayDDD %>
@@ -22,8 +22,7 @@
       <%= f.text_field :number %>
     </div>
     <div class="field">
-      <%= f.label :carried_out %>
-      <%= f.check_box :carried_out %>
+
     </div>
     <div class="actions">
       <%= f.submit %>
