@@ -32,6 +32,8 @@ a {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    color: green;
+
   }
 }
 
@@ -65,5 +67,15 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+
+  #pop{
+    width:100px;
+    height:50px;
+    background:#f00;
+    position:absolute;
+    z-index:100;
+    top:30%;
+    left:40;
   }
 }

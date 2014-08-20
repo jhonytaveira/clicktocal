@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :register_numbers
-  root :to => "register_numbers#new"
+  root :to => "register_numbers#index"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

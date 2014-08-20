@@ -7,6 +7,10 @@ class RegisterNumbersController < ApplicationController
 
   end
 
+  def index
+
+  end
+
   # POST /register_numbers
   # POST /register_numbers.json
   def create

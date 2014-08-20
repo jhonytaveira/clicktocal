@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails clicktocal: development" uuid="e2ad974e-d474-4bab-8e50-82a661921276">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails clicktocal: test" uuid="4bce2e0d-76c2-4508-9ba0-b60be6903ed2">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails clicktocal: production" uuid="ecb7f872-491c-4964-bf9d-2a765e0479b6">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
