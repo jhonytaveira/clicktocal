@@ -12,6 +12,8 @@
     <% end %>
 
     <div class="field">
+    <%=  f.hidden_field :carried_out,value: false, input_html:{readonly: true}%>
+    <div class="field">
       <%= f.input :ip, input_html:{ readonly: true, style: 'width: 100px',type: 'hidden' }  %>
     </div>
     <div class="field">
