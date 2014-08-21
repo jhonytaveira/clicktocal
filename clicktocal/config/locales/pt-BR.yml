@@ -1,5 +1,5 @@
 pt-BR:
-  new_register: "Novo Registro"
+  new_register: "Liga pra min"
   listing_register: "Lista De Registro"
   edit_register: "Editar Registro"
   edit: "Editar"
@@ -141,7 +141,7 @@ pt-BR:
     select:
       prompt: Por favor selecione
     submit:
-      create: Criar %{model}
+      create: 'Ligue agora'
       submit: Salvar %{model}
       update: Atualizar %{model}
   number:
@@ -213,7 +213,7 @@ pt-BR:
     pm: ''
   activerecord:
     models:
-      register_number: "Numero de Registro"
+      register_number: "Ligue agora"
     attributes:
       register_number:
         number: "Número"

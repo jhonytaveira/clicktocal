@@ -18,7 +18,7 @@ class RegisterNumbersController < ApplicationController
 
     respond_to do |format|
       if @register_number.save
-        format.html { redirect_to new_register_number_path, notice: 'Register number was successfully created.' }
+        format.html { redirect_to new_register_number_path, notice: 'Numero de  registro criado com sucesso.' }
         format.json { render :show, status: :created, location: @register_number }
       else
         format.html { render :new }

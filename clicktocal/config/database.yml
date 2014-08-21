@@ -2,20 +2,19 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password: 
+  username: userclick
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock
-#  host: 192.168.1.242
 development:
   <<: *default
-  database: clicktocal_development
+  database: clicktocall
 
+  test:
+    <<: *default
+    database: clicktocall_test
 
-
-#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
-#
-
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+  production:
+    <<: *default
+    database: clicktocall_production
+    username: clicktocal
+    password: <%= ENV['CLICKTOCAL_DATABASE_PASSWORD'] %>

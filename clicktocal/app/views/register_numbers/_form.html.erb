@@ -4,7 +4,6 @@
           <div id="error_explanation">
             <h2><%= pluralize(@register_number.errors.count, "error") %> prohibited this register_number from being
               saved:</h2>
-
             <ul>
               <% @register_number.errors.full_messages.each do |message| %>
                   <li><%= message %></li>
@@ -34,26 +33,8 @@
         <%= f.submit %>
       </div>
   <% end %>
-
   <script type="text/javascript">
       var ip = myIP();
       $('#register_number_ip').val(ip.replace(' ', ''));
-
-      function myIP() {
-          if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
-          else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-          xmlhttp.open("GET", "http://api.hostip.info/get_html.php", false);
-          xmlhttp.send();
-
-          hostipInfo = xmlhttp.responseText.split("\n");
-
-          for (i = 0; hostipInfo.length >= i; i++) {
-              ipAddress = hostipInfo[i].split(":");
-              if (ipAddress[0] == "IP") return ipAddress[1];
-          }
-
-          return false;
-      }
   </script>
 </div>
