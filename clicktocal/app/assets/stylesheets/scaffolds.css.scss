@@ -13,7 +13,7 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: green;
   padding: 10px;
   font-size: 11px;
 }
@@ -21,7 +21,7 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666;
+    color: green;
   }
   &:hover {
     color: #fff;
@@ -45,6 +45,11 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+#bar{
+  background-color: greenyellow;
+
 }
 
 #error_explanation {
