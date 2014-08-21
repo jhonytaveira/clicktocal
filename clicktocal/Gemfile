@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'simple_form', '~> 3.0.2'
 
+gem 'twitter-bootstrap-rails', '~> 3.2.0'
+
 gem 'ip', '~> 0.3.1'
 
 gem 'human_attribute', '~> 0.2.0'
