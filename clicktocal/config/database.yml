@@ -1,11 +1,11 @@
-default: &default
+ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
   username: userclick
   password: 123456
   socket: /var/run/mysqld/mysqld.sock
-development:
+ development:
   <<: *default
   database: clicktocall
 
