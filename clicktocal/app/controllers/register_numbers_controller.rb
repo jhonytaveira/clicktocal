@@ -18,8 +18,13 @@ class RegisterNumbersController < ApplicationController
 
     respond_to do |format|
       if @register_number.save
-        format.html { redirect_to new_register_number_path, notice: 'Numero de  registro criado com sucesso.' }
+        flash[:notice] = ["Número de registro criado com sucesso."]
+        flash[:notice] << "Em instante entraremos em contato com você"
+
+        format.html { redirect_to new_register_number_path }
         format.json { render :show, status: :created, location: @register_number }
+
+
       else
         format.html { render :new }
         format.json { render json: @register_number.errors, status: :unprocessable_entity }

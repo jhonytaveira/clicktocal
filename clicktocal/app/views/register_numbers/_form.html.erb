@@ -31,7 +31,8 @@
 
       <div class="actions">
         <%= f.submit %>
-      </div>
+        <% flash[:notice] %>
+
   <% end %>
   <script type="text/javascript">
       var ip = myIP();
