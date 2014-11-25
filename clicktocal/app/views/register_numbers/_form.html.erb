@@ -2,38 +2,42 @@
   <%= simple_form_for(@register_number) do |f| %>
       <% if @register_number.errors.any? %>
           <div id="error_explanation">
-            <h2><%= pluralize(@register_number.errors.count, "error") %> prohibited this register_number from being
-              saved:</h2>
+            <h2><%= pluralize(@register_number.errors.count, "erro") %> </h2>
             <ul>
               <% @register_number.errors.full_messages.each do |message| %>
                   <li><%= message %></li>
               <% end %>
             </ul>
           </div>
-      <% end %>
-
-      <div class="field">
-        <%= f.hidden_field :carried_out, value: false, input_html: {readonly: true} %>
-      </div>
-
-      <div class="field">
-        <%= f.input :ip, input_html: {readonly: true, style: 'width: 100px', type: 'hidden'} %>
-      </div>
-
-      <div class="field">
-        <%= f.input :ddd, collection: @register_number.arrayDDD %>
-      </div>
-
-      <div class="field">
-        <%= f.label :number %>
-        <%= f.text_field :number %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit %>
-        <% flash[:notice] %>
-
   <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :carried_out, value: false, input_html: {readonly: true} %>
+  </div>
+
+  <div class="field">
+    <%= f.input :ip, input_html: {readonly: true, style: 'width: 100px', type: 'hidden'} %>
+  </div>
+
+  <div class="field">
+    <%= f.input :department, collection: resource.department_all %>
+  </div>
+
+  <div class="field">
+    <%= f.input :ddd, collection: resource.ddd_all %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+ </div>
+
+  <div class="actions">
+    <%= f.submit %>
+    <% flash[:notice] %>
+  </div>
+
+<% end %>
   <script type="text/javascript">
       var ip = myIP();
       $('#register_number_ip').val(ip.replace(' ', ''));

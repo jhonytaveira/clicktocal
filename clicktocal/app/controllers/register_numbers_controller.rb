@@ -1,39 +1,35 @@
 class RegisterNumbersController < ApplicationController
+  include RegisterNumbersHelper
 
-  # GET /register_numbers/new
   def new
-
     @register_number = RegisterNumber.new
-
   end
 
-  def index
-
-  end
-
-  # POST /register_numbers
-  # POST /register_numbers.json
   def create
     @register_number = RegisterNumber.new(register_number_params)
+    chooses_departments params[:register_number][:department]
+    save
+  end
 
+  def register_number_params
+    params.require(:register_number).permit(:ip, :ddd, :number, :carried_out, :department)
+  end
+
+  def messages
+    flash[:notice] = [I18n.t("messages.record_number_created_successfully")]
+    flash[:notice] << I18n.t("messages.in_a_moment_we_will_contact_you")
+  end
+
+  def save
     respond_to do |format|
       if @register_number.save
-        flash[:notice] = ["Número de registro criado com sucesso."]
-        flash[:notice] << "Em instante entraremos em contato com você"
-
+        messages
         format.html { redirect_to new_register_number_path }
         format.json { render :show, status: :created, location: @register_number }
-
-
       else
         format.html { render :new }
         format.json { render json: @register_number.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def register_number_params
-    params.require(:register_number).permit(:ip, :ddd, :number, :carried_out)
   end
 end
