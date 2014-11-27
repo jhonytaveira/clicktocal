@@ -2,6 +2,9 @@ class RegisterNumber < ActiveRecord::Base
 
   validates :number, :ddd, :department, presence: true
 
+  validates :number, numericality: true, length: { is: 8 }
+
+
   validate :call_open?
 
   def call_open?
