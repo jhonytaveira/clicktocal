@@ -1,13 +1,12 @@
 class RegisterNumber < ActiveRecord::Base
 
   validates :number, :ddd, :department, presence: true
-
   validates :number, numericality: true, length: { is: 8 }
 
   validate :call_open?
 
   def call_open?
-    if (RegisterNumber.by_number(self.number)).by_ddd(self.ddd).open.any?
+    if self.class.by_number(number).by_ddd(ddd).open.any?
       errors.add(:base, :please_wait_in_a_moment_we_will_contact_you)
     end
   end
