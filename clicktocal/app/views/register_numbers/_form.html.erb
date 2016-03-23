@@ -1,14 +1,14 @@
 <div id="pop" xmlns="http://www.w3.org/1999/html">
-  <%= simple_form_for(@register_number) do |f| %>
-      <% if @register_number.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@register_number.errors.count, "erro") %> </h2>
-            <ul>
-              <% @register_number.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-              <% end %>
-            </ul>
-          </div>
+<%= simple_form_for(@register_number) do |f| %>
+  <% if @register_number.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@register_number.errors.count, "erro") %> </h2>
+        <ul>
+          <% @register_number.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+    </div>
   <% end %>
 
   <div class="field">
@@ -32,6 +32,10 @@
     <%= f.text_field :number %>
  </div>
 
+	<div class="field">
+  	<%= recaptcha_tags %>
+	</div>
+
   <div class="actions">
     <%= f.submit %>
     <% flash[:notice] %>
@@ -39,7 +43,7 @@
 
 <% end %>
   <script type="text/javascript">
-      var ip = myIP();
-      $('#register_number_ip').val(ip.replace(' ', ''));
+    var ip = myIP();
+    $('#register_number_ip').val(ip.replace(' ', ''));
   </script>
 </div>

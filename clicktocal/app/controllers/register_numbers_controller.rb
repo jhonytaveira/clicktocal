@@ -22,7 +22,7 @@ class RegisterNumbersController < ApplicationController
 
   def save
     respond_to do |format|
-      if @register_number.save
+      if verify_recaptcha(model: @register_number) && @register_number.save
         messages
         format.html { redirect_to new_register_number_path }
         format.json { render :show, status: :created, location: @register_number }
