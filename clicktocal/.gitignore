@@ -13,4 +13,10 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+tmp/
+config/database.yml
+.idea/
+.env
+.idea/clicktocal.iml
+.idea/dataSources.xml
+.idea/workspace.xml

@@ -12,6 +12,11 @@ pt-BR:
   attendance: "Atendimento"
   date:
 
+  recaptcha:
+    errors:
+      verification_failed: "Recaptcha: A verificação falhou"
+      recaptcha_unreachable: "ocorreu um erro de tempo limite ao tentar verificar o captcha"
+
   messages:
     record_number_created_successfully: "Número de registro criado com sucesso."
     in_a_moment_we_will_contact_you: "Em instantes entraremos em contato com você."
